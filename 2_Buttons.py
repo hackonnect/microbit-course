@@ -29,3 +29,17 @@ sleep(5000)
 presses = button_a.get_presses() + button_b.get_presses()
 display.scroll(str(presses))
 '''
+
+# You can also see if the button was pressed while the microbit is asleep using
+# was_pressed().
+
+'''
+display.show('?')
+sleep(1000)
+if button_a.was_pressed():
+    display.show(Image.HAPPY)
+else:
+    display.show(Image.SAD)
+sleep(1000)
+display.clear()
+'''

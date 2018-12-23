@@ -55,3 +55,13 @@ square_list = [large_square, medium_square, small_square]
 display.show(square_list, loop=False, delay=1000)
 display.clear()
 '''
+
+# You can also set and get the brightness of individual pixels using their X and Y coordinates,
+# using set_pixel(x, y) and get_pixel(x, y) respectively. The coordinates are 0 indexed, with
+# the top left hand corner being (0, 0) and the bottom right being (4, 4)
+
+'''
+display.set_pixel(0, 0, 7)
+sleep(1000)
+display.scroll(display.get_pixel(1, 1))
+'''
